@@ -1,0 +1,488 @@
+PROCEDURE blackjack
+TYPE c=cards(52),cardnumber:INTEGER
+DIM deck:c
+TYPE dealer=ccount,acecount,showcard,dc:INTEGER; bjack:BOOLEAN; holecard$
+:STRING[20]
+TYPE player=ccnt,acecnt,card1,card2,doublecount(3),pc(3):INTEGER
+; bj:BOOLEAN; name$,card$(3):STRING[20]
+DIM d:dealer; p:player
+DIM balance,startbalance,wager,i,temp,bet(3):INTEGER
+DIM card:STRING[20]; reply:STRING[1]
+DIM score:REAL
+PRINT CHR$(12); 
+temp=RND(-(VAL(RIGHT$(DATE$,2))))
+FOR i=1 TO 52
+deck.cards(i)=i-1
+NEXT i
+deck.cardnumber=52
+PRINT "***** Las Vegas Blackjack *****"
+PRINT 
+REPEAT 
+
+INPUT "What is your name? ",p.name$
+p.name$=TRIM$(p.name$)
+UNTIL p.name$<>""
+IF LEFT$(p.name$,1)>="a" AND LEFT$(p.name$,1)<"z" THEN 
+p.name$=CHR$(ASC(p.name$)-$20)+MID$(p.name$,2,255)
+ENDIF 
+p.name$=LEFT$(p.name$,10)
+LOOP 
+PRINT 
+INPUT "Do you want a list of the rules (y/n)?",reply
+RUN upper(reply)
+IF reply<>"N" THEN 
+PRINT CHR$(12); 
+PRINT "The rules of this casino are" \ PRINT "as follows..."
+PRINT "Blackjack pays 3 to 2."
+PRINT "Pairs may be split."
+PRINT "You only get one card on each" \ PRINT "split ace."
+PRINT "You may double down on a" \ PRINT "split pair."
+PRINT "You do not lose a tie hand."
+PRINT "Dealer hits 16," \ PRINT "stands on all 17's."
+PRINT "Wagers are 1 to 500 dollars."
+RUN wait
+PRINT CHR$(12); 
+PRINT "Type Enter to draw a card."
+PRINT "Type S     to stand."
+PRINT "type D     to double down."
+PRINT "Type X     to split your pairs."
+PRINT "Bet 0 dollars to end a game."
+PRINT "* Good Luck *"
+ENDIF 
+PRINT 
+PRINT "This game started at "; RIGHT$(DATE$,8)
+startbalance=RND(1000)+50
+balance=startbalance
+PRINT "Your bankroll for this game is  "; balance; " dollars."
+RUN ibet(d,p,0,0)
+RUN wait
+RUN clrmsg
+RUN clrcards
+LOOP 
+IF deck.cardnumber>=49 THEN 
+RUN shuffle(deck)
+ENDIF 
+LOOP 
+RUN printat(0,13)
+PRINT "Bankroll=$"; balance; 
+RUN printat(16,13)
+RUN curon
+INPUT "Wager? ",wager
+RUN clrcards
+RUN clrmsg
+EXITIF wager>=0 AND wager<=500 THEN ENDEXIT 
+RUN printat(0,14)
+PRINT "House limits are between $1 and $500."; 
+RUN wait
+RUN clrmsg
+ENDLOOP 
+IF wager<>0 THEN 
+FOR i=1 TO 2 \p.pc(i)=0 \NEXT i
+d.dc=0
+p.ccnt=0 \p.acecnt=0
+d.ccount=0 \d.acecount=0
+RUN Draw(deck,p.ccnt,p.acecnt,p.card1,p.card$(1))
+RUN Draw(deck,d.ccount,d.acecount,d.showcard,card)
+RUN printcard(p,0,0,0,"?")
+d.dc=d.dc+1
+RUN printcard(p,0,0,d.dc,card)
+d.dc=d.dc+1
+RUN Draw(deck,p.ccnt,p.acecnt,p.card2,p.card$(2))
+RUN printcard(p,0,4,p.pc(1),p.card$(1))
+p.pc(1)=p.pc(1)+1
+RUN printcard(p,0,4,p.pc(1),p.card$(2))
+p.pc(1)=p.pc(1)+1
+RUN Draw(deck,d.ccount,d.acecount,temp,d.holecard$)
+p.bj=p.ccnt=21
+d.bjack=d.ccount=21
+IF d.showcard=11 THEN 
+RUN ibet(d,p,balance,wager)
+ENDIF 
+IF d.bjack THEN 
+RUN printat(0,14)
+PRINT "Blackjack!"; 
+ELSE 
+LOOP 
+RUN printat(0,13)
+RUN curon
+INPUT reply
+RUN upper(reply)
+EXITIF p.card1=p.card2 AND reply="X" THEN ENDEXIT 
+EXITIF SUBSTR(reply,"SD")<>0 THEN ENDEXIT 
+RUN printat(0,14)
+PRINT "Invalid request--retry."
+RUN wait
+RUN clrmsg
+ENDLOOP 
+IF reply="" OR reply="D" THEN 
+RUN playermove(deck,p,reply,wager,p.ccnt,1)
+p.bj=FALSE
+ENDIF 
+IF reply="X" THEN 
+FOR i=1 TO 2
+bet(i)=wager
+p.doublecount(i)=p.card1
+IF p.card1=11 THEN p.acecnt=1
+ENDIF 
+RUN Draw(deck,p.doublecount(i),p.acecnt,temp,card)
+RUN printcard(p,0,i*4,0,p.card$(i))
+RUN printcard(p,0,i*4,1,card)
+p.pc(i)=2
+IF p.card1<>11 THEN 
+LOOP 
+RUN printat(16,13)
+PRINT "Hand #"; i; 
+RUN printat(0,13)
+RUN curon
+INPUT reply
+RUN upper(reply)
+EXITIF SUBSTR(reply,"SD")<>0 THEN ENDEXIT 
+PRINT "Invalid request--retry."
+RUN wait
+RUN clrmsg
+ENDLOOP 
+ENDIF 
+IF reply="" OR reply="D" THEN 
+RUN playermove(deck,p,reply,bet(i),p.doublecount(i),i)
+ENDIF 
+NEXT i
+RUN dealermove(deck,d,p)
+FOR i=1 TO 2
+RUN clrmsg
+PRINT "Hand #"; i
+RUN winloss(d,p,p.doublecount(i),bet(i),balance)
+RUN wait
+NEXT i
+RUN clrmsg
+ENDIF 
+ENDIF 
+IF p.pc(2)=0 THEN 
+IF p.bj THEN 
+RUN printat(0,14)
+PRINT "Blackjack!"; 
+wager=1.5*wager
+ENDIF 
+RUN dealermove(deck,d,p)
+RUN winloss(d,p,p.ccnt,wager,balance)
+ENDIF 
+ENDIF 
+EXITIF wager=0 THEN ENDEXIT 
+ENDLOOP 
+IF balance<0 THEN 
+RUN clrmsg
+RUN printat(0,14)
+PRINT p.name$; " owes the casino " \ PRINT -(balance); " dollars."
+; 
+ENDIF 
+score=balance-startbalance
+RUN curon
+RUN printat(0,13)
+INPUT "New Game (Y/N)? ",reply
+RUN upper(reply)
+EXITIF reply="N" THEN ENDEXIT 
+PRINT CHR$(12); 
+ENDLOOP 
+RUN clrmsg
+END 
+
+PROCEDURE dealermove
+TYPE c=cards(52),cardnumber:INTEGER
+TYPE dealer=ccount,acecount,showcard,dc:INTEGER; bjack:BOOLEAN; holecard$
+:STRING[20]
+TYPE player=ccnt,acecnt,card1,card2,doublecount(3),pc(3):INTEGER
+; bj:BOOLEAN; name$,card$(3):STRING[20]
+PARAM deck:c; d:dealer; p:player
+DIM temp:INTEGER; card:STRING[20]
+RUN printcard(p,0,0,0,d.holecard$)
+WHILE d.ccount<17 AND NOT(p.bj) AND p.ccnt<=21 DO 
+RUN Draw(deck,d.ccount,d.acecount,temp,card)
+RUN printcard(p,0,0,d.dc,card)
+d.dc=d.dc+1
+ENDWHILE 
+END 
+
+PROCEDURE winloss
+TYPE dealer=ccount,acecount,showcard,dc:INTEGER; bjack:BOOLEAN; holecard$
+:STRING[20]
+TYPE player=ccnt,acecnt,card1,card2,doublecount(3),pc(3):INTEGER
+; bj:BOOLEAN; name$,card$(3):STRING[20]
+PARAM d:dealer; p:player; count,wager,balance:INTEGER
+IF d.ccount>21 THEN 
+RUN printat(0,14)
+PRINT "Dealer busts.         "; 
+ENDIF 
+IF count>21 THEN 
+RUN printat(0,14)
+PRINT p.name$; " busts.        "; 
+ENDIF 
+IF NOT(p.bj) AND NOT(d.bjack) AND count<=21 AND d.ccount<=21 THEN
+
+RUN printat(0,15)
+PRINT p.name$; "="; count; "             "; 
+RUN printat(16,15)
+PRINT "Dealer="; d.ccount; 
+ENDIF 
+RUN printat(16,14)
+IF d.bjack AND NOT(p.bj) OR count>21 OR count<d.ccount AND d.ccount
+<22 THEN 
+balance=balance-wager
+PRINT "Dealer wins."; 
+ELSE 
+IF count=d.ccount AND count<22 THEN 
+PRINT "Tie game."; 
+ELSE 
+balance=balance+wager
+PRINT p.name$; " wins."; 
+ENDIF 
+ENDIF 
+END 
+
+PROCEDURE playermove
+TYPE c=cards(52),cardnumber:INTEGER
+TYPE player=ccnt,acecnt,card1,card2,doublecount(3),pc(3):INTEGER
+; bj:BOOLEAN; name$,card$(3):STRING[20]
+PARAM deck:c; p:player; reply:STRING[1]; wager,count,i:INTEGER
+DIM temp:INTEGER; card:STRING[20]
+IF reply="D" THEN 
+RUN clrmsg
+RUN Draw(deck,count,p.acecnt,temp,card)
+wager=2*wager
+RUN printat(0,15)
+PRINT p.name$; " doubles down."; 
+RUN wait
+RUN clrmsg
+RUN printcard(p,0,i*4,p.pc(i),card)
+p.pc(i)=p.pc(i)+1
+RUN printat(0,14)
+IF count>22 THEN PRINT p.name$; " busts."
+ENDIF 
+END 
+ENDIF 
+REPEAT 
+RUN Draw(deck,count,p.acecnt,temp,card)
+RUN printcard(p,0,i*4,p.pc(i),card)
+p.pc(i)=p.pc(i)+1
+IF count>21 THEN 
+END 
+ENDIF 
+LOOP 
+RUN printat(0,13)
+RUN curon
+INPUT reply
+RUN upper(reply)
+EXITIF SUBSTR(reply,"S")<>0 THEN ENDEXIT 
+PRINT "Invalid request--retry."
+RUN wait
+RUN clrmsg
+ENDLOOP 
+UNTIL reply="S"
+END 
+
+PROCEDURE ibet
+TYPE dealer=ccount,acecount,showcard,dc:INTEGER; bjack:BOOLEAN; holecard$
+:STRING[20]
+TYPE player=ccnt,acecnt,card1,card2,doublecount(3),pc(3):INTEGER
+; bj:BOOLEAN; name$,card$(3):STRING[20]
+PARAM d:dealer; p:player; balance,wager:INTEGER
+DIM reply:STRING[1]
+IF wager=0 THEN 
+END 
+ENDIF 
+LOOP 
+RUN printat(0,14)
+RUN curon
+INPUT "Insurance bet (Y or N)? ",reply
+RUN upper(reply)
+EXITIF SUBSTR(reply,"YN")<>0 THEN ENDEXIT 
+ENDLOOP 
+IF d.bjack THEN 
+IF reply="Y" THEN 
+balance=balance+wager
+RUN printat(0,14)
+PRINT "You win insurance bet of $"; wager; "."; 
+RUN wait
+ENDIF 
+ELSE 
+IF reply="Y" THEN 
+balance=balance-.5*wager
+RUN printat(0,15)
+PRINT "Dealer doesn't have Blackjack."; 
+RUN printat(0,14)
+PRINT "You lose insurance bet of $"; .5*wager; 
+RUN wait
+ENDIF 
+ENDIF 
+RUN clrmsg
+END 
+PROCEDURE draw
+TYPE d=cards(52),cardnumber:INTEGER
+PARAM deck:d; ccount,acecount,cardvalue:INTEGER
+PARAM card$:STRING[20]
+DIM r,s:INTEGER
+
+IF deck.cardnumber>=52 THEN 
+RUN shuffle(deck)
+ENDIF 
+cardvalue=deck.cards(deck.cardnumber)
+deck.cardnumber=deck.cardnumber+1
+s=cardvalue/13
+r=MOD(cardvalue,13)
+cardvalue=r+1
+IF cardvalue>10 THEN cardvalue=10
+ENDIF 
+IF cardvalue=1 THEN cardvalue=11
+ENDIF 
+FOR i=0 TO r
+READ rank$
+NEXT i
+RESTORE 100
+FOR i=0 TO s
+READ suit$
+NEXT i
+card$=rank$+" of "+suit$
+ccount=ccount+cardvalue
+IF cardvalue=11 THEN acecount=acecount+1 \ ENDIF 
+WHILE ccount>21 AND acecount>0 DO 
+acecount=acecount-1
+ccount=ccount-10
+ENDWHILE 
+END 
+DATA "Ace","2","3","4"
+DATA "5","6","7","8"
+DATA "9","Ten","Jack","Queen","King"
+100 DATA "Spades","Hearts","Clubs","Diamonds"
+
+PROCEDURE shuffle
+TYPE d=cards(52),cardnumber:INTEGER
+PARAM deck:d
+DIM i,j,delay,temp:INTEGER
+RUN curoff
+RUN printat(0,15)
+PRINT " ***** Dealer Reshuffles *****"; 
+FOR delay=1 TO INT(RND(10))+1
+FOR i=1 TO 52
+j=RND(51)+1
+temp=deck.cards(i)
+deck.cards(i)=deck.cards(j)
+deck.cards(j)=temp
+NEXT i
+NEXT delay
+deck.cardnumber=1
+RUN printat(0,15)
+PRINT "                              "; 
+RUN curon
+END 
+
+PROCEDURE upper
+PARAM reply:STRING[1]
+IF reply<>"" AND reply>"Z" THEN 
+reply=CHR$(ASC(reply)-$20)
+ENDIF 
+END 
+PROCEDURE printcard
+TYPE player=ccnt,acecnt,card1,card2,doublecount(3),pc(3):INTEGER
+; bj:BOOLEAN; name$,card$(3):STRING[20]
+PARAM p:player; x,y,cc:INTEGER
+PARAM suit$:STRING[20]
+DIM s:INTEGER
+RUN curoff
+RUN printat(x+cc*4,y)
+PRINT LEFT$(suit$,1); CHR$(140); CHR$(140); CHR$(140); 
+GOSUB 600
+IF SUBSTR("Heart",suit$)<>0 THEN s=1 \ ENDIF 
+IF SUBSTR("Diamond",suit$)<>0 THEN s=2 \ ENDIF 
+IF SUBSTR("Spade",suit$)<>0 THEN s=3 \ ENDIF 
+IF SUBSTR("Club",suit$)<>0 THEN s=4 \ ENDIF 
+IF suit$="?" THEN s=5 \ ENDIF 
+ON s GOSUB 100,200,300,400,500
+END 
+100 RUN printat(x+cc*4,y+1)
+PRINT CHR$(138); CHR$(183); CHR$(183); CHR$(178); 
+GOSUB 600
+RUN printat(x+cc*4,y+2)
+PRINT CHR$(138); CHR$(189); CHR$(191); CHR$(184); 
+GOSUB 600
+RUN printat(x+cc*4,y+3)
+PRINT CHR$(138); CHR$(176); CHR$(184); LEFT$(suit$,1); 
+GOSUB 600
+RETURN 
+200 RUN printat(x+cc*4,y+1)
+PRINT CHR$(138); CHR$(177); CHR$(187); CHR$(176); 
+GOSUB 600
+RUN printat(x+cc*4,y+2)
+PRINT CHR$(138); CHR$(189); CHR$(191); CHR$(184); 
+GOSUB 600
+RUN printat(x+cc*4,y+3)
+PRINT CHR$(138); CHR$(176); CHR$(184); LEFT$(suit$,1); 
+GOSUB 600
+RETURN 
+300 RUN printat(x+cc*4,y+1)
+PRINT CHR$(138); CHR$(161); CHR$(171); CHR$(160); 
+GOSUB 600
+RUN printat(x+cc*4,y+2)
+PRINT CHR$(138); CHR$(175); CHR$(175); CHR$(170); 
+GOSUB 600
+RUN printat(x+cc*4,y+3)
+PRINT CHR$(138); CHR$(176); CHR$(168); LEFT$(suit$,1); 
+GOSUB 600
+RETURN 
+400 RUN printat(x+cc*4,y+1)
+PRINT CHR$(138); CHR$(165); CHR$(175); CHR$(160); 
+GOSUB 600
+RUN printat(x+cc*4,y+2)
+PRINT CHR$(138); CHR$(175); CHR$(175); CHR$(170); 
+GOSUB 600
+RUN printat(x+cc*4,y+3)
+PRINT CHR$(138); CHR$(176); CHR$(168); LEFT$(suit$,1); 
+GOSUB 600
+RETURN 
+500 RUN printat(x+cc*4,y+1)
+PRINT CHR$(138); CHR$(128); CHR$(128); CHR$(128); 
+GOSUB 600
+RUN printat(x+cc*4,y+2)
+PRINT CHR$(138); CHR$(128); CHR$(128); CHR$(128); 
+GOSUB 600
+RUN printat(x+cc*4,y+3)
+PRINT CHR$(138); CHR$(128); CHR$(128); LEFT$(suit$,1); 
+GOSUB 600
+RETURN 
+600 IF cc<7 AND cc>0 THEN 
+PRINT CHR$(138); 
+ENDIF 
+RETURN 
+PROCEDURE printat
+PARAM x,y:INTEGER
+PRINT CHR$(2); CHR$(32+x); CHR$(32+y); 
+END 
+PROCEDURE clrcards
+DIM a$:STRING[33]
+DIM t:INTEGER
+RUN curoff
+PRINT CHR$(1); 
+a$="같같같같같같같같같같같같같같같같"
+FOR t=1 TO 13
+PRINT a$; 
+NEXT t
+RUN curon
+END 
+PROCEDURE clrmsg
+DIM t:INTEGER
+RUN curoff
+RUN printat(0,13)
+PRINT "                                                                                              "
+; 
+RUN printat(0,13)
+RUN curon
+END 
+PROCEDURE wait
+DIM reply:STRING[1]
+RUN printat(16,13)
+RUN curon
+INPUT "Press <Enter>? ",reply
+END 
+PROCEDURE curoff
+PRINT CHR$(5); CHR$(32); 
+END 
+PROCEDURE curon
+PRINT CHR$(5); CHR$(33); 
+END 

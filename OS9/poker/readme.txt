@@ -1,0 +1,1 @@
+POKERThis is a Basic09 game for theCoCo. It must be run from aVDG screen and is therfore compatible with OS9 level 1.I have included both thesource (poker.b09) andthe runb executable file(poker).  Make sure theattributes are set correctly (ATTR e pe)on the executable file.Enjoy.Jim GerrieJanuary 2002jgerrie@becon.orgLong Live Retro-Computing!
