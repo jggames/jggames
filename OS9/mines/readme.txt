@@ -1,1 +1,6 @@
-              Jim's OS9 Level II GamesHere are some ports to basic09 from The IBM PCYou will need the basic09 modules gfx2,syscall,and inkey available in your cmds directory inorder to run these games. Jim Gerrie 2014jimgerrie@ns.sympatico.ca
+              Jim's OS9 Level I Games
+
+
+Mines is a port to Basic09 from Micro Color Basic. You will need the basic09 modules gfx and inkey available in your cmds directory in order to run this game. 
+
+Jim Gerrie 2016
