@@ -9,7 +9,7 @@ order to run these games.
 The source file is incomplete. It has somehow 
 become corrupted over the years...
 
-Too see the game, run the Basic09 runtime 
+To see the game, run the Basic09 runtime 
 version.
 
 It might need you to turn off keyboard echo,
