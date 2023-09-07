@@ -8,3 +8,5 @@ The OS9 directory contains Basic09 and C source files for the OS9 operating syst
 For the Level 1 programs you will need to run them on a Coco 1/2 or Coco 1/2 emulator or you will have to set up a 32 X 16 VDG screen on your Coco 3 running OS9 Level 2.
 For the Level 2 programs you will generally need an 80 X 24 Text Window open. Some of the programs use the graphics libraries GFX (for Level 1) or GFX2 (for Level 2).
 You will sometimes need to load other additional routines like INKEY, or TMODE...
+
+There are also other directories for the TRS-80 MC-10 and specific projects.
