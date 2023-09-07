@@ -1,5 +1,5 @@
 # jggames
-My TRS-80 Colour Computer games and other software
+My TRS-80 Colour Computer and Micro Color Computer Games and other software
 
 The RSDOS directory contains Color Basic programs for the TRS-80 Color Computer.  In general the definitive versions of all these programs can be found
 on my most recent release of my JGGAMES.zip containing various .dsk files for use on the VCC Coco emulator.
