@@ -1,0 +1,269 @@
+<DOCTYPE html>
+<html>
+<head> 
+<META name="author" content="Jim Gerrie">
+<META name="description" content="Jim Gerrie Modern MC-10 Games"> 
+<META name="keywords" content="software studies,retrogame archeology,retrocomputing,8-bit,vintage computing,classic computing,retrocoding,BASIC,home computer,type-in program,GOTO,GOSUB">
+<title>Type-in Mania: Programs</title>
+<LINK REL="StyleSheet" href="css/typeinmania.css" TYPE="text/css">
+</head>
+<body>
+<p align="center"><IMG src="img/CBU-Top-Bars.png" alt="CBU-Top-Bars" border="0" align="center" width=100%></p>
+<p align="center"><h1>Type-in Mania: Original Programs and Program Ports</h1></p>
+<p align="center"><h1 align="center">Coded in Micro Color Basic by Jim & Charlie Gerrie</h1></p>
+
+<table align="center">
+<tbody>
+
+<tr>
+<td align="center"><p><big><a href="Type-in-Mania-Programs.html">Type-in Mania Main Program Page</big></p><p><big>&nbsp;</a></big></p></td>
+<td align="center"><p><big><a href="Type-in-Mania-AI-Programs.html">Early BASIC AI Programs Page</a></big></p><p><big><a href="jgames_TextAdventures.html">Classic BASIC Text Adventures</a></big></p></td>
+<td align="center"><p><big><a href="jgames.html">Jim Gerrie's Modern MC-10 BASIC Games</a></big></p><p><big><a href="MC-10Programmers.html">Modern Games by Other Programmers</a></big></p></td>
+</tr>
+
+<tr>
+<td colspan="3">&nbsp;</td>
+</tr>
+
+<tr><td colspan="3" align="center"><big>Click on screenshots to lanunch emulator. Then select FILENAME from Cassette menu and type RUN and hit Enter</big></td></tr>
+
+<tr>
+<td colspan="3">&nbsp;</td>
+</tr>
+
+<script type="text/javascript">
+	row_counter = 0;
+	col_counter = 0;
+	var items = [
+'10PRINT2 (2023)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/10print2.png"></a>',
+'3DLABY (2018)*!<br /><a href="https://github.com/jggames/MCBasic"><img border=0 alt="screenshot" src="img/3dlaby.png">',
+'3DMCHASE (2018)*!<br /><a href="https://github.com/jggames/MCBasic"><img border=0 alt="screenshot" src="img/3dmchase.png">',
+'ADVENTR (2018)* Atari Adventure<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/adventr.png">',
+'AINVADER (2020)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/ainvader.png">',
+'ALATTACK (2018)* Alien Attack<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/alattack.png">',
+'ALERT0 (2018)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/alert0.png">',
+'ALIEN (2015)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/alien.png">',
+'ALPHAFOR "Alpha Force" (2020)*!</a><br /><a href="https://github.com/jggames/MCBasic"><img border=0 alt="screenshot" src="img/alphafor.png">',
+'ASTSTORM (2013)* <br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/aststorm.png">',
+'ATANARJ (2017)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/atanarj.png">',
+'AUSFLAG (2020)*<br /><a href="../MC10/Australasian.html"><img border=0 alt="screenshot" src="img/ausflag.png">',
+'AUSFLAG2 (2021)*<br /><a href="../MC10/Australasian.html"><img border=0 alt="screenshot" src="img/ausflag2.png">',
+'BARBIE (2023)*</a><br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img alt="screenshot" src="img/barbie.png" border="0">',
+'BATLBOTS (2012)* for Retrospectiva 2012<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img alt="screenshot" src="img/batlbots.png" border="0">',
+'BERZERK (2009)*!<br /><a href="https://github.com/jggames/MCBasic"><img src="img/berzerk.png" border="0" alt="screenshot">',
+'BIGRED (2014)*<br /><a href="../MC10/"><img border=0 alt="screenshot" src="img/bigred.png">',
+'BOARDER (2000s)*!<br /><a href="https://github.com/jggames/MCBasic"><img src="img/boarder.png" border="0" alt="screenshot">',
+'BOMBAIM 10-Liner (2024)*<br /><a href="../MC10/MC-10Programmers.html"><img border=0 alt="screenshot" src="img/bombaim.png">',
+'BOMBRUN Robert Sieg<br /><a href="../MC10/MC-10Programmers.html"><img border=0 alt="screenshot" src="img/bombrun.png">',
+'BPIT "Boulder Pit" (2024)+!<br /><a href="https://github.com/jggames/MCBasic"><img border=0 alt="screenshot" src="img/bpit.png">',
+'BRICKWAL (2022)*!<br /><a href="https://github.com/jggames/MCBasic"><img border=0 alt="screenshot" src="img/brickwal.png">',
+'BUSTERS (2018)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/busters.png">',
+'BUBBLE (2022)+ 10Liner<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/bubble.png">',
+'CANFLAG (2017)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype/Productivity%20%26%20Education"><img border=0 alt="screenshot" src="img/canflag.png">',
+'CAR (2020)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img src="img/car.png" border="0" alt="screenshot">',
+'CAVE3D (2011)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/cave3d.png">',
+'CAVERAID "Cave Raid" (2020)*!<br /><a href="https://github.com/jggames/MCBasic"><img border=0 alt="screenshot" src="img/caveraid.png">',
+'CAVERN (2016)* Cavern 2160<br /><a href="../MC10/"><img border=0 alt="screenshot" src="img/cavern.png">',
+'CAVMARS (2016)* for 10Liner Contest<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/cavmars.png">',
+'CBSONG (2024)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype/Productivity%20%26%20Education"><img border=0 alt="screenshot" src="img/cbsong.png">',
+'CEMETERY (2015)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/cemetery.png">',
+'CENTI (2007)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img src="img/centipede.png" border="0" alt="screenshot">',
+'CHESS (2000s)+!<br /><a href="https://github.com/jggames/MCBasic"><img src="img/chess.png" border="0" alt="screenshot">',
+'CHOPPER (2019)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/chopper.png">',
+'CLOSEOUT (2021)+! L.L. Beh<br /><a href="https://github.com/jggames/MCBasic"><img border=0 alt="screenshot" src="img/closeout.png">',
+'COLOROID +! mookieghana 2010<br /><a href="https://github.com/jggames/MCBasic"><img border=0 alt="screenshot" src="img/coloroid.png">',
+'CRAWL (2012)* for Retrospectiva 2012<br /><a href="mc-10-master/MC10/"><img alt="screenshot" src="img/crawl.png" border="0">',
+'DANTESRU (2017) "Dante&apos;s Run"<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/dantesru.png">',
+'DASH (2016)* for 10Liner Contest<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/dash.png">',
+'DECOY "D E C O Y" (2020)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/decoy.png">',
+'DEEPSCAN (2016)*!<br /><a href="https://github.com/jggames/MCBasic"><img border=0 alt="screenshot" src="img/deepscan.png">',
+'DEFCON1 (2008)*!<br /><a href="https://github.com/jggames/MCBasic"><img src="img/defcon1.png" border="0" alt="screenshot">',
+'DEFENDER (2022)* for 10Liner Contest<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img src="img/defender.png" border="0" alt="screenshot">',
+'DEFENSE (2015)+ Akky Han<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/defense.png">',
+'DEMONATT (2021)+! Charlie Pelosi<br /><a href="https://github.com/jggames/MCBasic"><img border=0 alt="screenshot" src="img/demonatt.png">',
+'DEUTCHLN (2016)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype/Productivity%20%26%20Education"><img border=0 alt="screenshot" src="img/deutchln.png">',
+'DICEWARS (2014)* for RetroMañía 2014<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><IMG border=0 alt="screenshot" src="img/dicewars.png">',
+'DIGDUG (2018)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/digdug.png">',
+'DIGGER (2014)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/digger.png">',
+'DINOSAUR (2021)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/dinosaur.png">',
+'DOCTOR (2012)* for Retrospectiva 2012<br /><A href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><IMG border=0 alt="screenshot" src="img/doctor.png">',
+'DODGE (2014)+ Steven Reid<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/dodge.png">',
+'DODGEM (2016)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/dodgem.png">',
+'DOJO (2016)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/dojo.png">',
+'DRAC (2021)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype/Productivity%20%26%20Education"><img border=0 alt="screenshot" src="img/drac.png">',
+'DRIVE Dino Dini<br /><a href="../MC10/MC-10Programmers.html"><img border=0 alt="screenshot" src="img/drive.png">',
+'DUNGEON (2000s)*&nbsp;&nbsp;<a href="DUNGHELP.TXT">(Instructions)<br /><a href="DUNGEON.TXT"><img src="img/dungeon.png" border="0" alt="screenshot">',
+'ELEVATOR (2019)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/elevator.png">',
+'EMPIRE (2021)+ Walter Bright 1977<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/empire.png">',
+'ERII 10-Liner (2023)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/erii.png">',
+'FARFALL (2013)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/farfall.png">',
+'FESQUEST "CoCoFEST Quest"(2013)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/fesquest.png">',
+'FISHIN (2018)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/fishin.png">',
+'FLANDERS (2018)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype/Productivity%20%26%20Education"><img border=0 alt="screenshot" src="img/flanders.png">',
+'FLAGS (2021)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype/Productivity%20%26%20Education"><img border=0 alt="screenshot" src="img/czech.png">',
+'FLAPPY (2014)* for RetroMañía 2014<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><IMG border=0 alt="screenshot" src="img/flappy.png">',
+'FLIPULL (2014)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/flipull.png">',
+'FREECELL (2021)+ Christian Hoffmann<br /><a href="https://github.com/jggames/MCBasic"><img border=0 alt="screenshot" src="img/freecell.png">',
+'FROG (2000s)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img src="img/frog.png" border="0" alt="screenshot">',
+'GAME2048 (2014)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/game2048.png">',
+'GOFISH + "Go Fish" <i>Rosetta Code</i> 2011 <br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/gofish.png">',
+'GOLDHUNT (2017)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/goldhunt.png">',
+'GOTCHA* (2017)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/gotcha.png">',
+'GRAIL (2010)+ "Grail of the Gods" IBOL<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/grail.png">',
+'G-WARS + Requires MCX<br /><a href="VMC10_073D.zip"><img border=0 alt="screenshot" src="img/g-wars.png">',
+'HEART + 1-Liner Rogerio Neves 2022<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/heart.png">',
+'HERDER (2016)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/herder.png">',
+'HJABALL (2021)+ Hjalfi<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype/Productivity%20%26%20Education"><img border=0 alt="screenshot" src="img/hjaball.png">',
+'HOROSCOP "Horoscope" Jeff Trantor 2012<br /><a href="../MC10/JG_MC_AI_Progs.html"><img border=0 alt="screenshot" src="img/horoscop.png">',
+'INVADER (2000s)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img src="img/invader.png" border="0" alt="screenshot">',
+'JAILBRK (2021)*! "Galaxy Jailbreak"<br /><a href="https://github.com/jggames/MCBasic"><img src="img/jailbrk.png" border="0" alt="screenshot">',
+'JET (1980s)*!<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img src="img/jet.png" border="0" alt="screenshot">',
+'JETPAC (2016)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/jetpac.png">',
+'JEWELER (2000s)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img src="img/jeweler.png" border="0" alt="screenshot">',
+'JIMCHKRS (2021)+<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/jimchkrs.png">',
+'JIMVADER *<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/jimvader.png">',
+'JUMPJACK (2021)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/jumpjack.png">',
+'JUNGLER +<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/jungler.png">',
+'KINDER "Kinder Morgan" (2018)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype/Text%20Adventures"><img border=0 alt="screenshot" src="img/kinder.png">',
+'KONG (2016)* for 10Liner Contest<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/kong.png">',
+'KUIPER (2000s)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img src="img/kuiper.png" border="0" alt="screenshot">',
+'KURSK (2000s)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img src="img/kursk.png" border="0" alt="screenshot">',
+'LANDER (2000s)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img src="img/lander.png" border="0" alt="screenshot">',
+'LIFE *!<br /><a href="https://github.com/jggames/MCBasic"><img src="img/life.png" border="0" alt="screenshot">',
+'LODERUN (2010)*!<br /><a href="https://github.com/jggames/MCBasic"><img border=0 alt="screenshot" src="img/loderun.png">',
+'LUNAR + Requires MCX<br /><a href="VMC10_073D.zip"><img border=0 alt="screenshot" src="img/lunar.png">',
+'LURKLEY "Lurkley Manor" + MCX Req&apos;d<br /><a href="VMC10_073D.zip"><img border=0 alt="screenshot" src="img/lurkley.png">',
+'MADMAG + Requires MCX<br /><a href="VMC10_073D.zip"><img border=0 alt="screenshot" src="img/madmag.png">',
+'MAHJONG "Mahjong" (2020)*!<br /><a href="https://github.com/jggames/MCBasic"><img src="img/mahjong.png" border="0" alt="screenshot">',
+'MAKEDUNG (2000s)* Use with DUNGEON<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/makedung.png">',
+'MANDEL (2015)+<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype/Productivity%20%26%20Education"><img border=0 alt="screenshot" src="img/mandel.png">',
+'MAPMAKER (2017)*<br /><a href="caves.html"><img border=0 alt="screenshot" src="img/mapmaker.png">',
+'MARKS (2000s)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/marks.png">',
+'MATRIX (2015)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/matrix.png">',
+'MAZERACE (2018)* for 10 Liner Contest<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><IMG border=0 alt="screenshot" src="img/mazerace.png">',
+'MCJOUST (2011)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/mcjoust.png">',
+'MCTETRIS (2000s)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img src="img/mctetris.png" border="0" alt="screenshot">',
+'MCTEXT (1980)*</a> <A HREF="TEXT2.TXT">(Instructions)<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/mctext.png">',
+'METEOR (2014)* with Steve Evans (Zephyr)<br /><IMG border=0 alt="screenshot" src="img/meteor.png">',
+'MILLI (2015)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/milli.png">',
+'MINER "Manic Miner" (2020)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/miner.png">',
+'MINES + "Mine Camp" 2005<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/mines.png">',
+'MINIDUNG (2016)* for 10Liner Contest<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/minidung.png">',
+'MINISTRY + "Ministry" Wesley May 2002<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/ministry.png">',
+'MINITAUR (2018)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/minitaur.png">',
+'MISSLATT (2000s)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img src="img/missile.png" border="0" alt="screenshot">',
+'MISSILEC "Missile Command" + MCX Req&apos;d<br /><a href="VMC10_073D.zip"><img border=0 alt="screenshot" src="img/missilec.png">',
+'MONSTER (2000s)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img src="img/monster.png" border="0" alt="screenshot">',
+'MONTEIRO (2016)*<br /><a href="../MC10/MC-10Programmers.html"><img border=0 alt="screenshot" src="img/monteiro.png">',
+'MOONSHUT + Requires MCX<br /><a href="VMC10_073D.zip"><img border=0 alt="screenshot" src="img/moonshut.png">',
+'MOUSE (2016)* Space Mouse<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/mouse.png">',
+'MTFUJI (2017)*!<br /><a href="https://github.com/jggames/MCBasic"><img border=0 alt="screenshot" src="img/mtfuji.png">',
+'NBLITZ "Night Blitz" (2020)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/nblitz.png">',
+'NECMAZE + Requires MCX<br /><a href="VMC10_073D.zip"><img border=0 alt="screenshot" src="img/necmaze.png">',
+'NEDERLND * (2022)<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype/Productivity%20%26%20Education"><img border=0 alt="screenshot" src="img/nederlnd.png">',
+'NYAN (2013)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/nyan.png">',
+'OLDGLORY (2023)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype/Productivity%20%26%20Education"><img border=0 alt="screenshot" src="img/oldglory.png">',
+'OUTHOUSE "Outhouse" (2020)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/outhouse.png">',
+'OVERTAKE (2015)* for 10Liner Contest<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/overtake.png">',
+'PACRAT (2021)* for 10Liner BASIC Jam<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><IMG border=0 alt="screenshot" src="img/pacrat.png">',
+'PENGUINO (2012)* for Retrospectiva 2012<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><IMG border=0 alt="screenshot" src="img/penguino.png">',
+'PINBALLC (2020) +! Colin Carter<br /><a href="https://github.com/jggames/MCBasic"><img border=0 alt="screenshot" src="img/pinballc.png">',
+'PIPES * for Cococoding Contest<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><IMG border=0 alt="screenshot" src="img/pipes.png">',
+'POOPER (2022)* for 10Liner Contest<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/pooper.png">',
+'POPCORN (2023)+!<br /><a href="https://github.com/jggames/MCBasic"><img border=0 alt="screenshot" src="img/popcorn.png">',
+'PRESTAVB "P.R.E.S.T.A.V.B.A"+ Miroslav Fídler 1988<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype/Text%20Adventures"><img border=0 alt="screenshot" src="img/prestavb2.png">',
+'QBERT (2009)*<br /><a href="https://github.com/jggames/MCBasic"><img border=0 alt="screenshot" src="img/qbert.png">',
+'QIX (2015)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/qix.png">',
+'QUEBEC (2016)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/quebec.png">',
+'QUIZNITE (2019)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype/Productivity%20%26%20Education"><img border=0 alt="screenshot" src="img/quiznite.png">',
+'RAIDER (2000s)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img src="img/raider.png" border="0" alt="screenshot">',
+'RAIL (2014)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/rail.png">',
+'RALLYX (2022)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/xrally.png">',
+'RANGER (2018)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/ranger.png">',
+'RISK (2007)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img src="img/risk.png" border="0" alt="screenshot">',
+'ROADRACE (2015)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/roadrace.png">',
+'ROMP * for Retrospectiva 2012<br /><A href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><IMG border=0 alt="screenshot" src="img/romp.png">',
+'ROVER (2008)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img src="img/rover.png" border="0" alt="screenshot">',
+'RROID (2011)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/rroid.png">',
+'RRUNNER (2017)* Road Runner<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/rrunner.png">',
+'SABOT (2016)* Sabotage<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/sabot.png">',
+'SCRABBLE (2012)* for Cococoding Contest<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype/Productivity%20%26%20Education"><IMG border=0 alt="screenshot" src="img/scrabble.png">',
+'SCRAMBLE (2010)*!<br /><a href="https://github.com/jggames/MCBasic"><img border=0 alt="screenshot" src="img/scramble.png">',
+'SENTINEL (2000s)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img src="img/sentinel.png" border="0" alt="screenshot">',
+'SG6TEXT (2023)*<br /><a href="../MC10/MC-10Programmers.html"><img border=0 alt="screenshot" src="img/sg6txt.png">',
+'SHEBOYGN "The Monster that Ate Sheboygan"(2015)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/sheboygn.png">',
+'SHOPLIFT (2019)* Shoplifting Boy<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/shoplift.png">',
+'SLAPSHOT (2021)* for 10Liner Contest<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img src="img/slapshot.png" border="0" alt="screenshot">',
+'SLOTS (2007)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img src="img/slots.png" border="0" alt="screenshot">',
+'SMASHUP (2023)* for 10Liner Contest<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/smashup.png">',
+'SNAKEBIT (2010)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/snakebit.png">',
+'SNAKSLAD 10-Liner (2024)*<br /><a href="../MC10/MC-10Programmers.html"><img border=0 alt="screenshot" src="img/snakslad.png">',
+'SNOWTREE (2018)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype/Productivity%20%26%20Education"><img border=0 alt="screenshot" src="img/snowtree.png">',
+'SOLCHESS (2020)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/solchess.png">',
+'SOLIT (2000s)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img src="img/solit.png" border="0" alt="screenshot">',
+'SPACEWAL (2015)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/spacewal.png">',
+'SPACEWAR + Requires MCX<br /><a href="VMC10_073D.zip"><img border=0 alt="screenshot" src="img/spacewar.png">',
+'SPCWAR (2021)* for 10Liner Contest<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/spcwar.png">',
+'SSHEET (1980)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype/Productivity%20%26%20Education"><img src="img/ssheet.png" border="0" alt="screenshot">',
+'STARMAPS J.W. Hurley + MCX Req&apos;d<br /><a href="VMC10_073D.zip"><img border=0 alt="screenshot" src="img/starmaps.png">',
+'STORM (2018)* <br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/storm.png">',
+'SUDOKU + <br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype/Productivity%20%26%20Education"><img src="img/sudoku.png" border="0" alt="screenshot">',
+'SUDOKUB + "Sudoku-80B" Scainet<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/sudokub.png">',
+'SUDOKGEN + "Sudoku Generator" Trey Tomes 2020<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype/Productivity%20%26%20Education"><img border=0 alt="screenshot" src="img/sudokgen.png">',
+'SWEEPER (2017)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/sweeper.png">',
+'SWEEPERH (2017)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/sweeperh.png">',
+'SWELFOOP +! "Swell Foop" Gert Van Der Knokke<br /><a href="../MC10/MC-10Programmers.html"><img border=0 alt="screenshot" src="img/swelfoop.png">',
+'TAILGUN "Tail Gunner" (2020)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img src="img/tailgun.png" border="0" alt="screenshot">',
+'TEXTED (2013)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/texted.png">',
+'TIMBER (2018)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/timber.png">',
+'TOMB (2014)* for Retrochallenge 2014<br /><A href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><IMG border=0 alt="screenshot" src="img/tomb.png">',
+'TORPATT + Requires MCX<br /><a href="JG_MC10.html"><img border=0 alt="screenshot" src="img/torpatt.png">',
+'TRENCHFI (2015)* Trench Fire<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/trenchfi.png">',
+'TRON + Eduardo Ochs 2006<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/tron.png">',
+'TUNNELS (2012)* for Cococoding Contest<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><IMG border=0 alt="screenshot" src="img/tunnels.png">',
+'UNDEAD (2017)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/undead.png">',
+'VADER (2000s)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img src="img/vader.png" border="0" alt="screenshot">',
+'VOLCANO (2023)* for 10Liner Contest<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img src="img/volcano.png" border="0" alt="screenshot">',
+'WARBIRDS (2016)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/warbirds.png">',
+'XMAS2018 (2018)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype/Productivity%20%26%20Education"><img border=0 alt="screenshot" src="img/xmas2018.png">',
+'XMAS2019 (2019)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype/Productivity%20%26%20Education"><img border=0 alt="screenshot" src="img/xmas2019.png">',
+'XMASSTAR (2022)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype/Productivity%20%26%20Education"><img border=0 alt="screenshot" src="img/xmasstar.png">',
+'XTREE (2021)*<br /><a href="https://github.com/jggames/trs80mc10/tree/master/quicktype"><img border=0 alt="screenshot" src="img/xtree.png">'
+	];
+
+//
+//  3 Columnization of above data
+//  Copyright (c) Jim Gerrie 2020 (with the help of Charlie)
+//
+	items.sort();
+
+	for (row_counter = 0; row_counter < items.length; row_counter++)
+	{
+           col_counter++;
+		if (col_counter == 1) {
+			document.write('<tr>');
+		}
+		document.write('<td align="center" valign="top">'+items[row_counter]+'</a></td>');
+		if (col_counter == 3) {
+			document.write('</tr>');
+			col_counter = 0;
+		}
+	}
+	if (col_counter == 1) {
+		document.write('<td align="center" valign="top">&nbsp;</td><td align="center" valign="top">&nbsp;</td></tr>');
+	}
+	if (col_counter == 2) {
+		document.write('<td align="center" valign="top">&nbsp;</td></tr>');
+	}
+
+	document.write('<td>&nbsp;</td><td align="center" valign="top">Total programs: '+items.length+'</td><td>&nbsp;</td></tr>');
+
+</script>
+
+</tbody>
+</table>
+
+<p align="center"><IMG src="img/CBU-Curved-Bar.png" alt="CBU-Curved-Bar" border="0" align="center" width=100%></p>
+
+</body>
+</html>

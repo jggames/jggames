@@ -1,0 +1,1220 @@
+ 
+ 
+                                                                           
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                     HOW TO USE 
+                      LOGICAL THEORIST 5.3 (c) February 12, 2003
+ 
+                                 By James B. Gerrie
+
+          Logical Theorist 5.3 is a "Symbol Processor" which helps you to 
+          create formal logical systems with the advantage of editing and 
+          full error checking.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+                                                                          2 
+ 
+                                  LOGICAL THEORIST(c) 
+ 
+                                     Version 5.3 
+          SYSTEM REQUIREMENTS 
+ 
+          Minimum Memory 512K 
+          Minimum Disk Configuration: One disk system 
+          Operating system PC-DOS or MS-DOS version 3.3 or higher. 
+ 
+          DEDICATED TO 
+ 
+          Dr. Cyril Welch, Dr. Paul Bogaard, and the Religious Studies and 
+          Philosophy Departments of Mount Allison University.
+
+
+                        Copyright, James B. Gerrie, 12 February 2003 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+                                                                          3 
+ 
+                                  TABLE OF CONTENTS 
+ 
+          WHAT IS Logical Theorist 5.3 . . . . . . . . . . . . . . . .    4 
+ 
+          STARTING UP Logical Theorist 5.3 . . . . . . . . . . . . . .    5 
+ 
+          HOW TO USE Logical Theorist 5.3  . . . . . . . . . . . . . .    6 
+               ENTERING AXIOMS . . . . . . . . . . . . . . . . . . . .    6 
+               VARIABLES . . . . . . . . . . . . . . . . . . . . . . .    6 
+               BRACKETING  . . . . . . . . . . . . . . . . . . . . . .    6 
+               WELL FORMED FORMULAS  . . . . . . . . . . . . . . . . .    7 
+               BLOCKING AND HIGHLIGHTING . . . . . . . . . . . . . . .    7 
+               MENUS . . . . . . . . . . . . . . . . . . . . . . . . .    7 
+               The ESC key . . . . . . . . . . . . . . . . . . . . . .    7 
+               CURSOR CONTROL  . . . . . . . . . . . . . . . . . . . .    8 
+               ERRORS  . . . . . . . . . . . . . . . . . . . . . . . .    9 
+               ERROR CODES . . . . . . . . . . . . . . . . . . . . . .    9 
+               THE SCREEN  . . . . . . . . . . . . . . . . . . . . . .   10 
+ 
+          Main Menu  . . . . . . . . . . . . . . . . . . . . . . . . .   10 
+               Def 1 . . . . . . . . . . . . . . . . . . . . . . . . .   10 
+               Def 2 . . . . . . . . . . . . . . . . . . . . . . . . .   10 
+               Def 3 . . . . . . . . . . . . . . . . . . . . . . . . .   10 
+               Rule 1  . . . . . . . . . . . . . . . . . . . . . . . .   11 
+               Rule 2  . . . . . . . . . . . . . . . . . . . . . . . .   11 
+               DR 1  . . . . . . . . . . . . . . . . . . . . . . . . .   11 
+               DR 2  . . . . . . . . . . . . . . . . . . . . . . . . .   12 
+               Other . . . . . . . . . . . . . . . . . . . . . . . . .   12 
+               Edit  . . . . . . . . . . . . . . . . . . . . . . . . .   12 
+               File  . . . . . . . . . . . . . . . . . . . . . . . . .   12 
+ 
+          Quitting the program . . . . . . . . . . . . . . . . . . . .   13 
+ 
+          Other Functions Menu . . . . . . . . . . . . . . . . . . . .   13 
+               Def 4 . . . . . . . . . . . . . . . . . . . . . . . . .   13 
+               Rule 3  . . . . . . . . . . . . . . . . . . . . . . . .   13 
+               Values  . . . . . . . . . . . . . . . . . . . . . . . .   14 
+               Table . . . . . . . . . . . . . . . . . . . . . . . . .   14 
+               Replace . . . . . . . . . . . . . . . . . . . . . . . .   14 
+               CPon  . . . . . . . . . . . . . . . . . . . . . . . . .   15 
+               CPoff . . . . . . . . . . . . . . . . . . . . . . . . .   15 
+               Axiom . . . . . . . . . . . . . . . . . . . . . . . . .   16 
+ 
+          Files Menu . . . . . . . . . . . . . . . . . . . . . . . . .   16 
+               Load  . . . . . . . . . . . . . . . . . . . . . . . . .   16 
+               Save  . . . . . . . . . . . . . . . . . . . . . . . . .   17 
+               New . . . . . . . . . . . . . . . . . . . . . . . . . .   17 
+               Files . . . . . . . . . . . . . . . . . . . . . . . . .   17 
+               ChgDir  . . . . . . . . . . . . . . . . . . . . . . . .   17 
+               Erase . . . . . . . . . . . . . . . . . . . . . . . . .   18 
+               Mkdir . . . . . . . . . . . . . . . . . . . . . . . . .   18 
+               Print . . . . . . . . . . . . . . . . . . . . . . . . .   18
+  
+ 
+ 
+ 
+                                                                          4 
+ 
+ 
+          Edit Menu  . . . . . . . . . . . . . . . . . . . . . . . . .   19 
+               Block . . . . . . . . . . . . . . . . . . . . . . . . .   19 
+               Vroom . . . . . . . . . . . . . . . . . . . . . . . . .   19 
+               Search  . . . . . . . . . . . . . . . . . . . . . . . .   20 
+               Occamize  . . . . . . . . . . . . . . . . . . . . . . .   20 
+               Store . . . . . . . . . . . . . . . . . . . . . . . . .   21 
+ 
+          Additional functions . . . . . . . . . . . . . . . . . . . .   21 
+ 
+          Control Keys Appendix  . . . . . . . . . . . . . . . . . . .   22 
+ 
+          Programme Files  . . . . . . . . . . . . . . . . . . . . . .   23 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                           WHAT IS Logical Theorist 5.3? 
+ 
+          The purpose of this "theorem machine" is to provide an 
+          environment for the easy and accurate development of logical 
+          systems along the lines of those presented in "Principia 
+          Mathematica."  It achieves this end by allowing only legal logical 
+          operations to be performed.  Because the computer does the mundane 
+          work of checking and creating new lines, mistakes that often 
+          result from misreading, mistyping, or inaccurate 
+          transcription of lines, can be avoided.  With the high degree of 
+          symbolization involved in formal logic systems it is easy to 
+          introduce errors and to mistakenly derive formulas that are 
+          invalid.  By letting the computer do the work one can escape the 
+          all to common "optical errors" and concentrate on the creative 
+          work of trying to reach new theorems without fear of syntactic 
+          mistake. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+                                                                          5 
+ 
+                          STARTING UP Logical Theorist 5.3 
+ 
+          1.   Insert the disk into the drive of your choice.  If you have 
+               copied Logic Theorist 5.3 (LOGIC53.EXE) to a hard drive then 
+               change the path to the sub-directory where you have located 
+               the program. 
+ 
+          2.   Type: 
+                    <logic53> <Start up file> <background colour> 
+          <foreground colour> 
+ 
+               Example: 
+                    LOGIC53 TEST.DAT 7 0 
+ 
+               and press ENTER or RETURN. 
+ 
+          3.   After a few seconds the title screen will appear.  It will 
+               remain on the screen for several seconds and then the 
+               start-up message will appear 
+ 
+               Do you want to create a new system? (y/n) 
+ 
+               If you wish to start the process of entering axioms in order 
+               to create your own logical system type: 
+                                             <y> 
+               This will put you into the axiom entering mode described in 
+               the Edit Menu section of this manual. 
+ 
+               Otherwise type: 
+                                             <n> 
+ 
+               This will allow you to specify a file of lines for loading 
+               which has been previously created and saved. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+  
+                                                                          6 
+ 
+                           HOW TO USE Logical Theorist 5.3 
+ 
+          ENTERING AXIOMS 
+ 
+               The first step in the development of any axiomatic logical 
+          system, such as the one presented by Alfred North Whitehead and 
+          Bertrand Russell, involves the entry of a few base axioms from 
+          which the rest of the system is derived.  One can use the same 
+          basic axioms of Principia Mathematica in the Logical Theorist 5.3 
+          program but one is free to choose any axioms that conform to the 
+          basic rules of modern symbolic logic and the rules of consistent 
+          bracketing and proper variables as outlined in this manual.  You 
+          can begin entering axioms as soon as you start Logical Theorist 
+          5.3 by simply answering <y> to the "...new system (y/n)" prompt, 
+          or at other time by going to the Edit Menu and choosing <F8> for 
+          the Axiom function. 
+ 
+          VARIABLES 
+ 
+               As the old adage goes with Ford Model T's one can choose to 
+          use any variables one likes as long as they are single lowercase 
+          letters or a combination of a lowercase letter and one of five 
+          available Greek letters.  Uppercase variables can also be used 
+          but are treated as constants that cannot be substituted for by 
+          other variables.  Two exceptions are the lower case "v" and the 
+          upper case "E" which are reserved for the program's use.  The 
+          first is used to represent the traditional conjunctive "or," which 
+          normally takes the form of a wedge.  The second is used as the 
+          symbol for the existential quantifier for existence, which is 
+          traditionally represented by a backwards "E".   
+ 
+          BRACKETING 
+ 
+               Another protocol adhered to by the program is consistent 
+          bracketing.  In developing systems by hand on paper it is easy to 
+          leave out brackets that are unnecessary for comprehension.  It 
+          is also the practice of many logicians to use different forms of 
+          brackets in order to make theorems easier to read.  These 
+          distinctions only confuse the computer so only curved "()"
+          brackets are used within the program.  Although it makes the 
+          lines a little harder to read, it is much simpler to write a 
+          program using a consistent approach for the bracketing of 
+          formulas.  This is unfortunate and may be revised in future 
+          versions of the program, but as of yet, I have not determined any 
+          consistent form of bracketing that would serve both human and 
+          computer needs. 
+               The most important aspect of bracketing is the program's 
+          requirement that all lines be surrounded by a pair of brackets 
+          that enclose the theorem as a whole.  While this is not necessary 
+          for our own comprehension of a line it makes the computer's task 
+          of breaking down a line into its component parts much simpler.
+  
+ 
+ 
+ 
+                                                                          7 
+ 
+ 
+          WELL FORMED FORMULAS 
+ 
+               A well formed formula is any valid logical expression.  Some 
+          examples of valid well formed formulas are: 
+               (p>p) 
+               ~P 
+               ~~q 
+               ((~pvq)>(~qvp)) 
+               (Ex)Tx 
+               ~(x)~Tx 
+          Notice that single variables count as well formed formulas (WFFs) 
+          and require no outside brackets.  Complex well formed formulas, 
+          such as (p>p), require outside brackets. 
+ 
+ 
+          BLOCKING AND HIGHLIGHTING
+ 
+               Blocking [Ctrl-B] is the procedure of highlighting a line or
+          part of a line in order to perform some function or logical
+          operation on it. In carrying out blocking, one must usually follow
+          the guidelines that apply to bracketing of well formed formulas.
+ 
+ 
+          MENUS
+ 
+               Logical Theorist 5.3 is a menu driven program.  This means that
+          all of its main functions are available to you through a hierarchy
+          of different menus bars that appear at the bottom of the 
+          screen.  These menu bars give you a list of functions which can 
+          be performed by pressing one of the function or "F" keys 
+          available on all IBM compatible computers.  Since the menu system 
+          is hierarchical, from the Main Menu bar one can press keys that
+          makes one of three sub menus available until <ESC> is pressed.
+          For example, from the Main Menu bar one can select a range
+          of file operations by pressing <F10>.  This new menu bar allows
+          the function keys to perform a different set of functions, which
+          will remain available, and listed at the bottom of the screen,
+          until you move to another sub menu or press <ESC> to return to the
+          Main Menu.
+ 
+
+          The ESC key 
+ 
+               In the program the <ESC> key performs three basic functions. 
+          It will take you back to the Main Menu from any of the sub menus.  
+          Pressing <ESC> at the Main Menu will allow you to exit the 
+          program.  Finally, it will abort activated functions that have 
+          been selected from the various menu bars or through control key 
+          combinations.
+  
+ 
+ 
+ 
+                                                                          8 
+ 
+                                   CURSOR CONTROL 
+ 
+ 
+               The following is a list of the cursor movement keys and 
+          what they do: 
+ 
+ 
+          Right Arrow    Moves the cursor one character to the right. 
+ 
+          Left Arrow     Moves the cursor one character to the left. 
+ 
+          Up Arrow       Moves the cursor one line up. 
+ 
+          Down Arrow     Moves the cursor one line up. 
+ 
+          Pg Up          If the cursor is not located on the top line of 
+                         the lines screen pressing this key will move the 
+                         cursor to the top line of the screen.  Otherwise 
+                         it moves the cursor up by 10 lines. 
+ 
+          Pg Dn          If the cursor is not located on the bottom line of 
+                         the lines screen pressing this key will move the 
+                         cursor to the bottom line of the screen.  
+                         Otherwise it moves the cursor down by 10 lines. 
+ 
+          Ctrl-Pg Up     If the cursor is not located on the top line of 
+                         the lines screen pressing this key will move the 
+                         cursor to the top line of the screen.  Otherwise 
+                         it moves the cursor up by 100 lines. 
+ 
+          Ctrl-Pg Dn     If the cursor is not located on the bottom line of 
+                         the lines screen pressing this key will move the 
+                         cursor to the bottom line of the screen.  
+                         Otherwise it moves the cursor down by 100 lines. 
+ 
+          Home           Moves the cursor to the beginning of the line. 
+ 
+          End            Moves the cursor right by 60 characters. 
+ 
+          Ctrl-Home      If the cursor is not located on the top line of 
+                         the lines screen pressing this key will move the 
+                         cursor to the top line of the screen.  Otherwise 
+                         it moves the cursor to the first line of the 
+                         system. 
+ 
+          Ctrl-End       If the cursor is not located on the bottom line of 
+                         the lines screen pressing this key will move the 
+                         cursor to the bottom line of the screen.  
+                         Otherwise it Moves the Cursor to the last line of 
+                         the system. 
+ 
+  
+ 
+ 
+ 
+                                                                          9 
+ 
+          Ctrl-Right Arrow    Moves the cursor to the next right bracket.  
+                              It is a useful key to use when blocking 
+                              because it allows one to quickly block off 
+                              complete well formed formulas. 
+ 
+          Ctrl-Left Arrow     Moves the cursor to the next left bracket. 
+ 
+
+          ERRORS 
+ 
+               Throughout the program the strategy that applies to the creation
+          of new lines is to alert the user to mistakes.  If one attempts to
+          perform a legitimate function on a line then the computer will
+          prompt you to generate the new line along with its appropriate
+          justification.  If an illegitimate function is requested an error
+          message will be displayed explaining why that function could not be
+          performed.  You will be prompted to acknowledge the message.  Unlike
+          previous versions of the program, Logical Theorist 5.3 does not beep
+          when it encounters errors. 
+ 
+ 
+          ERROR CODES 
+ 
+               Logical Theorist 5.3 will notify you whenever an error is  
+          encountered.  These errors fall under two different categories: 
+ 
+          1 - If they are errors to do with the proper application of logic, 
+          such as improper bracketing, you should be able to correct your
+          mistake and continue.  In most cases the error will be displayed in
+          the work area along with the message "PRESS ENTER TO CONTINUE" in 
+          the menu bar.  Pressing <ENTER> will clear the error message and 
+          allow you to continue working with the system.  Sometimes additional
+          error messages will be displayed.  You will need to acknowledge these
+          messages as well.  Sometimes an error message might occur when you 
+          attempt to perform what appears to be a perfectly legal operation.
+          This might occur because the line lies within the confines of a
+          conditional proof.  See the CPon and CPoff functions for more 
+          information about the restrictions surrounding conditional proofs. 
+             
+          2 - The other kinds of errors you might encounter involve an 
+          actual flaw in the program.  These kinds of errors might 
+          display a specific message and will sometimes "lock up" the 
+          computer.  If you should encounter one of these kinds of errors 
+          please contact the programmer and outline what you were doing at 
+          the time the error occurred. 
+  
+ 
+ 
+  
+  
+ 
+                                                                         10 
+ 
+          THE SCREEN 
+ 
+               Logical Theorist 5.3 divides the computer's screen into 
+          five areas: 
+ 
+               1 -  The Lines Screen 
+               2 -  The Proof (or Justifications) Screen 
+               3 -  The Work Area (located just below the line and 
+                    Proof screens) 
+               4 -  The Help Area (located just above the Menu Bar) 
+               5 -  The Menu Bar (located at the bottom of the screen) 
+ 
+          The Lines Screen is where the lines (formulas) of your system 
+          are displayed.  The Work Area is where any line you highlight 
+          using the block function is displayed.  It is also where the 
+          various functions of the program are performed.  The Help Area 
+          displays useful information on how to run the program.  It will 
+          also indicate which menu level you currently are in.  The Menu 
+          Bar lists the current functions of the function keys. 
+ 
+ 
+                                      Main Menu 
+ 
+          Def 1 
+          Definition One 
+ 
+          Use the Block function to highlight the section of the line on 
+          which to perform the definitional transformation, including its 
+          surrounding brackets.  Then press <F1>.  If it is a valid 
+          transformation you will be notified of the creation of a new 
+          line and will be allowed to enter the line number for the new 
+          line.  Otherwise an error will occur.  See ERROR CODES. 
+ 
+ 
+          Def 2 
+          Definition Two 
+ 
+          Highlight the section of line, including its surrounding 
+          brackets, on which you want to perform the definitional 
+          transformation.  Then press <F2>.  If it is a valid 
+          transformation you will be notified of the creation of a new 
+          line.  Otherwise an error will occur.  See ERROR CODES. 
+ 
+ 
+          Def 3 
+          Definition Three 
+ 
+          Highlight the section of line, including its surrounding 
+          brackets, on which you want to perform the definitional 
+          transformation.  Then press <F3>.  If it is a valid 
+          transformation you will be notified of the creation of a new 
+          line.  Otherwise an error will occur.  See ERROR CODES.
+  
+ 
+ 
+ 
+                                                                         11 
+ 
+          Rule 1 
+          Rule One 
+ 
+          This is the rule commonly called Modus Ponens.  To perform this 
+          function you need to work with two lines.  The first of these 
+          lines is the major premise the second is the minor premise.  In 
+          carrying out this function you must first select the minor premise
+          by marking it using the block function.  Then you must move the
+          cursor to the line containing the major premise and press <F4> to
+          generate the conclusion.  If you have properly marked the minor 
+          premise and have made a valid choice of lines you will be notified
+          that a new line has been created.  Otherwise you will be notified
+          of an error.  See ERROR CODES. 
+ 
+          Rule 2 
+          Rule Two 
+ 
+          To perform this function first move the cursor to the line to which 
+          you wish to make substitutions.  You will then be prompted, variable
+          by variable, for the well formed formulas you wish to substitute.
+          Type in the desired WFF or move the cursor to another line and block
+          off a section of the formula for use as a WFF for substitution. Once 
+          you have entered or blocked a WFF simply press <ENTER>.  If you wish 
+          to make no substitution for a specific variable, press <ENTER> or 
+          <RETURN> to skip over it.  If your substitutions are valid a new 
+          line will be created, otherwise you will be notified with an 
+          error message. 
+
+ 
+          DR 1 
+          Derived Rule One 
+ 
+          This is the rule commonly called Hypothetical Syllogism.  Before 
+          this function can be used you must have generated within your 
+          system lines of either of the following forms: 
+ 
+               ((p>q)>((r>p)>(r>q))) 
+ 
+               ((p>q)>((q>r)>(p>r))) 
+ 
+          It is not necessary that the variables be the same as long as the 
+          form is the same.  To perform this function you need to work with 
+          two lines.  The first of these lines is the major premise the 
+          second is the minor premise.  In carrying out the option you must 
+          Highlight the line which is to be the minor premise and then move 
+          the cursor to the major premise line.  Once you have the cursor 
+          located on the line of the major premise press <F6> to generate 
+          the conclusion.  If you have properly blocked and have made a 
+          valid choice of lines you will be notified that a series of new 
+          lines are being created.  Otherwise you will be notified of an 
+          error.  See ERROR CODES. 
+  
+  
+                                                                         12 
+ 
+ 
+          DR 2 
+          Derived Rule Two 
+ 
+          This is the rule commonly called conjunction.  Before this 
+          function can be used you must have generated in your system a 
+          line of the following form: 
+ 
+               (p>(q>(p+q))) 
+ 
+          It is not necessary that the variables be the same as long as the 
+          form is the same.  To perform this function you need to work with 
+          two lines.  The first of these lines is the major premise the 
+          second is the minor premise.  In carrying out the option you must 
+          highlight the minor premise and then move the cursor to the major 
+          premise.  Once you have the cursor located on the line of the 
+          major premise press <F7> to generate the conclusion.  If you have 
+          properly blocked and have made a valid choice of lines you will 
+          be notified that a series of new lines are being created.  
+          Otherwise you will be notified of an error.  See ERROR CODES. 
+ 
+ 
+          Other 
+          Other functions 
+ 
+          This option brings up other menu functions which are needed for 
+          creating a predicate calculus. 
+
+ 
+          Edit 
+          Edit functions 
+ 
+          This option brings up another set of menu functions which are 
+          needed for various line edit operations such entering axioms.  It
+          is also how one gets to functions that allow one to change
+          program parameters and options.  
+
+ 
+          File 
+          File functions 
+ 
+          This option brings up another set of menu functions which are 
+          needed for various file operations such as saving and loading 
+          files.  It also is where the Print function is located.
+  
+  
+  
+ 
+                                                                         13 
+ 
+          Quit 
+          Quitting the program 
+ 
+          Pressing ESC when the main menu functions are displayed will 
+          allow you to exit the program and return to the DOS shell.  When 
+          ESC is pressed the following message will be displayed: 
+ 
+          Exit Logical Theorist 5.3 (y/n)?
+ 
+          If you press Y you will be returned to DOS.  Pressing any other 
+          key will allow you to continue working on your system. 
+
+ 
+
+                                Other Functions Menu 
+ 
+          Def 4 
+          Definition Four 
+ 
+          Highlight the section of line, including any necessary brackets
+          or negation symbols, on which you want to perform the 
+          definitional transformation.  Then press <F1>.  If it is a valid 
+          transformation you will be notified of the creation of a new 
+          line. Otherwise an error will occur.  See ERROR CODES. 
+
+ 
+          Rule 3 
+          Rule Three 
+ 
+          This rule is needed to derive theorems for predicate logic.  It 
+          is commonly called universal generalization.  To perform the 
+          function move the cursor to the line which you want to 
+          "universally generalize" and press <F3>.  If it is a valid line 
+          for the application of this rule a new line will be created at 
+          the end of the system. 
+ 
+
+  
+ 
+ 
+  
+ 
+                                                                         14 
+ 
+ 
+          Values 
+          Enter values for the interpretation of the logical symbols. 
+ 
+          This function allows you to enter the truth values to be used 
+          when interpreting the five basic logical symbols used in the 
+          creation of truth tables.  The default values are as follows: 
+               > 0 1    v 0 1    + 0 1    = 0 1    ~     0=False 
+               0 1 1    0 0 1    0 0 0    0 1 0    0 1 
+               1 0 1    1 1 1    1 0 1    1 0 1    1 0 
+          Tables can be created to a maximum size of 6 elements.  When you 
+          select the Values option you are first asked how many truth 
+          values you would like your truth tables to contain.  Enter a 
+          number or press <ENTER> to accept the displayed default.  Tables 
+          for each symbol will then appear on screen.  When entering 
+          the truth values for each logical symbol simply type a number and 
+          hit <ENTER> to go the next position in the table for that symbol.
+          If the number at the cursor position is already the number you
+          desire then simply press <ENTER> to accept it as a default.  When
+          you have finished entering all the values you want to change then
+          complete the process by pressing <ENTER> until the cursor reaches
+          the end of the tables or press <ESC> to skip through the 
+          remaining tables.   
+
+                                   IMPORTANT NOTE
+          It is the value of position (0,1) of the "and" table that is used  
+          to determine the preferred value for false.                  
+
+ 
+          Table 
+          Generate a truth table 
+ 
+          You will be asked to select the output device for the truth table.
+          Once you have entered your choice, a truth table will be 
+          generated for the current line.  You may change the interpretation
+          for the logical symbols by using the Values function. 
+  
+  
+ 
+ 
+                                                                         15 
+ 
+          Replace
+          Rule of Replacement 
+ 
+          When using the Rule of Replacement you must use two lines.  The 
+          first of these lines is the one into which you wish to make the 
+          replacement.  The second line is the line which contains the 
+          equivalency which is the basis of the replacement.  To perform a 
+          replacement first use the Block function to highlight the Well 
+          Formed Formula which is to be replaced.  Move the cursor to the 
+          line which contains the equivalency which is the basis of the 
+          replacement.  Then press <F5> in the Other Options menu.  If the 
+          highlighted section of the first line is found on either side of 
+          the equivalency in the second line a new line will be generated.  
+          This new line will be the same as the first line with the 
+          highlighted section replaced by the equivalent section from the 
+          second line. 
+  
+                                   IMPORTANT NOTE 
+          In order for this operation to be performed, variables from both 
+          the highlighted and equivalent section must be exactly the same.  
+          This may require that some substitutions be performed on the line 
+          which is the basis of the equivalency. 
+ 
+
+          CPon 
+          Start a conditional proof 
+ 
+          Allows for the entry of a hypothetical premise.  Conditional 
+          proofs can be "nested" with up to 10 conditional proofs going on 
+          at one time.  Once you have finished with your conditional proof 
+          a conclusion can be drawn by using the CPoff function.  Lines 
+          within the confines of a conditional proof are off limits to the 
+          rest of the system.  Once a conditional proof is closed only the 
+          last line of a conditional proof can be used by the system.  
+          Trying to perform an operation on a line within a conditional 
+          proof which has been closed will result in an error message. 
+          If you enter an premise that is not a tautology you will be prompted
+          to confirm that you wish to add it to your system of lines. 
+ 
+
+          CPoff 
+          End or "close" a conditional proof 
+ 
+          After one has entered a hypothetical premise using the CPon 
+          function and has generated the lines which are necessary for the 
+          proof, this function uses the hypothetical premise and the last 
+          line of the system to draw the conclusion from the conditional 
+          proof. 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+                                                                         16 
+ 
+                                   IMPORTANT NOTE 
+          Once a conditional proof has been closed the lines within the 
+          proof become off limits to the rest of the system.  If you 
+          attempt to perform what appears to be a legal operation on a line 
+          but receive an error message, check to make sure the line does 
+          not lie within the confines of a conditional proof.  All 
+          conditional proofs begin with lines with CP as their 
+          justification and end with lines which have RCP as their 
+          justification.
+
+
+          Axiom 
+          Enter new axioms 
+ 
+          Selecting this option allows one to enter new axioms at any point 
+          in the creation of a system.  All entered lines will be added to 
+          the beginning of the system with all the following created lines 
+          being renumbered to make room for the new axiom.  While this 
+          option is in effect one can type in lines using the regular keys 
+          as well as the function keys which will display certain symbols 
+          needed in doing symbolic logic.  These symbols are listed on the 
+          menu bar at the bottom of the screen.  When you have finished 
+          entering the line you must press <ENTER>.  You will then be prompted
+          to enter another axiom.  If you do not wish to enter more axioms then
+          press <ENTER> before typing anything or press <ESC> at any time to abort.
+          If you enter an axiom that is not a tautology you will be prompted
+          to confirm that you wish to add that axiom to your system of lines. 
+ 
+ 
+ 
+                                     Files Menu 
+ 
+          Load 
+          Ctrl-R 
+          Load a system of lines from a file 
+ 
+          Selecting this option will allow you to load lines you have 
+          previously created and saved to a disk file.  You are prompted 
+          for a filename.  This filename can consist of up to eight letters 
+          or numbers followed by a three letter extension which must also 
+          consist of only letters or numbers.  The filename is separated 
+          from the extension by a period.  To load a file type in its name 
+          and extension and hit <ENTER> or simply hit <ENTER> to accept the 
+          displayed default.  The file will the be loaded from disk using 
+          the default path specified by the ChgDir function.  When the file 
+          has finished loading, the lines will be displayed in the lines 
+          screen and you will be returned to the Files Menu.  
+ 
+ 
+  
+                                                                          17 
+ 
+          Save 
+          Ctrl-W 
+          Save your system of lines to a file 
+ 
+          Selecting this option will allow you to save the lines you have 
+          created to a disk file.  You are prompted for a filename, which 
+          may consist of up to eight letters or numbers followed by a period 
+          and a three letter extension.  If you have already entered a file
+          name it will be displayed as the default filename.  Once you have 
+          typed the filename and extension, or if you are using the default, 
+          simply press <ENTER> to save the file to disk.  When it is 
+          finished saving the file you will be returned to the Files menu. 
+
+ 
+          New 
+          Ctrl-N 
+          Clear the workspace
+ 
+          Selecting this option will clear the work space of any lines you 
+          have loaded or created.  You may then begin the creation of a new 
+          system of lines. 
+
+ 
+          Files 
+          Ctrl-F
+          Get a directory 
+ 
+          This function will display a list of files.  You are prompted 
+          for the path of the directory which you would like to have 
+          displayed.  If you want to simply display a directory for the 
+          default path that you have selected using the ChgDir function,  
+          press <ENTER> at the prompt.  The screen will be cleared and the 
+          directory displayed.  If the number of files exceeds the screen 
+          size use the arrow or Pg Up/Down keys to move through the list.
+          Wildcard characters can be added to the path to display only
+          certain files.  You can load any highlighted file by simply 
+          pressing <ENTER> or press <ESC> to abort the function. 
+ 
+ 
+          ChgDir 
+          Ctrl-C
+          Change the working directory/path 
+ 
+          This function allows you to designate the path to be used when 
+          saving or loading a file, or when taking directory.  It must 
+          include everything that a path usually contains except the actual 
+          file name.  Some examples of valid paths you might enter are: 
+               a:\ 
+               c:\logic\lines\ 
+          The path must include at least the storage device letter followed
+          by a colon.
+ 
+ 
+  
+ 
+                                                                         18 
+ 
+          Erase 
+          Erase a file 
+ 
+          This function allows you to delete unwanted files from your 
+          disk.  You will be prompted for a file name.  After you have 
+          entered the full name and extension of the file you wish to 
+          delete hit <ENTER>.  You will then be asked to confirm the 
+          deletion process.  If you do not want to delete the file answer 
+          <n> to the question "Do you want to delete this file (y/n)?"
+          or hit <ESC>. 
+ 
+
+          Mkdir 
+          Make a directory 
+ 
+          This function allows you to make a new directory.  You must 
+          include complete path information for the new directory.  Some 
+          examples are: 
+               c:\logic 
+               c:\logic\lines 
+            
+
+          Print 
+          Ctrl-P 
+          Print logical system or portion of the logical system to Disk or 
+          Printer 
+ 
+          When you select this option you will be prompted to print to disk 
+          or printer.  You will then be asked for the starting line number 
+          and ending line number to output.  If you simply press <ENTER> to 
+          these prompts the defaults of the first and last lines will be 
+          assumed and the whole system will be printed to disk or printer.  
+          Otherwise only the range you have selected will be output.  You 
+          will be prompted before the printing starts to press <ENTER> to 
+          continue with printing or you can press <ESC> to abort the print 
+          function. 
+ 
+          Printing to "disk" creates a file which you can then edit on your 
+          word processor for printing your lines in whatever manner which 
+          takes best advantage of your printer.  Edit using a word processor
+          of your choice.  Use a macro to speed the search and replacement of  
+          delimiting characters and the placeholders for logical operators.
+ 
+  
+ 
+ 
+                                                                         19 
+ 
+                                      Edit Menu 
+ 
+ 
+          Block 
+          Ctrl-B 
+          The highlighting function 
+ 
+          This function key turns on the blocking feature starting at the 
+          current cursor position.  You can use Ctrl-B to avoid having to 
+          go through the menus.  The highlighted line will also appear in 
+          the top half of the work area.  Once blocking is turned on you 
+          can use Ctrl-Right Arrow to jump consecutively to the next left 
+          bracket or you can simply use the Right and Left Arrow keys to 
+          highlight to the right or left.  Once you have highlighted the 
+          part of the line you want simply press <ENTER> or Ctrl-B to 
+          finish highlighting.  The definitional transformations do not 
+          require you to turn off blocking.  You need only turn blocking 
+          on, highlight the desired portion of the line and press the 
+          appropriate function key to perform the definitional 
+          transformation.  When the transformation is complete blocking 
+          will be automatically turned off for you.  When making a 
+          definitional transformation make sure the right menu is showing 
+          at the bottom of the screen.  Pressing <ESC> will also turn of 
+          blocking. 
+
+ 
+          Vroom 
+          Ctrl-V 
+          Jump to end of well formed formula (WFF) 
+ 
+          If the cursor is on the beginning bracket or negation symbol of 
+          any well formed formula when this function is activated the 
+          cursor will jump to the end bracket of that WFF.  This function 
+          is especially useful in combination with Blocking as it allows 
+          one to simply position the cursor on the beginning of a WFF, hit 
+          Ctrl-B and then Ctrl-V, to highlight the whole WFF. 
+
+  
+ 
+ 
+ 
+  
+  
+                                                                         20 
+ 
+          Search 
+          Ctrl-S 
+          Search for a string of characters 
+ 
+          This option allows one to search through the entire system for 
+          the occurrence of any string of variables and symbols.  You are 
+          asked first to enter the string you want to search for.  You are 
+          then asked what kind of search you would like performed.  There 
+          are three kinds of search.  One can search for any whole line that 
+          matches the search string by choosing [1] "Line Match", any
+          line containing the search string by choosing [2] "Where used", or 
+          any line matching the pattern of the variables of the search string
+          by choosing [3] "Form".  For example, searching for the string 
+          (p>p) by "form" will also find (q>q) and (r>r).  Lines which contain
+          or match the search string will have their line numbers listed in
+          the work area.  You can use the jump function to jump to these
+          numbers consecutively by simply selecting the Jump option and then 
+          hitting <ENTER> when prompted for the line number. 
+ 
+ 
+          Delete 
+          Ctrl-D 
+          Deletes a line 
+ 
+          This feature will delete the line on which the cursor is 
+          currently placed.  It will then renumber any following lines and 
+          proofs so that they represent the new line and proof numbers.  If 
+          any lines have the deleted line as one of their justifications, 
+          those lines will also be deleted. 
+
+ 
+          Occamize 
+          Remove all lines which do not contribute to proving a theorem 
+ 
+          This option allows one to select a line for "occamization" and 
+          then deletes all the lines from the system which do not 
+          contribute to proving that line.  It is a dangerous function 
+          which once activated starts deleting useless lines.  Be careful 
+          with its use!  It is for this reason that before the process 
+          starts you are asked to confirm your selection.  If you want to 
+          continue with the function press <ENTER>, otherwise press <ESC> 
+          to abort.  Once all the lines are deleted, the system is 
+          renumbered to represent an accurate proof of the line you 
+          selected.  You select a line by moving the cursor to it before 
+          selecting the function. 
+ 
+ 
+
+  
+ 
+                                                                         21 
+ 
+          Mem 
+          Display amount of free memory left for lines
+ 
+          This function gives a rough idea of how much memory you have left
+          for entering lines.  Just remember that the number represents
+          total string memory left for program use.  The program must
+          reserve about 1500 bytes for its own use.  The rest is available
+          for your system.  When the number drops below 1500 you will no
+          longer be allowed to add lines and will be prompted to save your
+          system to disk.  The program will terminate operations.  Exit and
+          restart Logical Theorist to refresh the memory space.
+
+ 
+          Store 
+          Save default paramters to disk 
+
+          This function stores your current parameters, logical values and
+          system filename in a file "logic53.pin."  This file is loaded at
+          startup.  Delete "logic53.pin" if you encounter any problems
+          starting Logical Theorist 5.3 or if you wish to return to the
+          original program defaults.
+ 
+          Param 
+          Input various parameters 
+ 
+          This function pops up a little menu in which you can enter values 
+          for screen colours and print parameters.  Press <ENTER> to accept 
+          displayed default values.  Continue to pressing <ENTER> to the 
+          end of the list to complete the function. 
+
+          The printer setup string can consist of a sequence of 2 digit
+          hexadecimal numbers, such as "1B0D".  Single digit numbers must
+          contain a leading zero, as in the case of the "0D" (ASCII 
+          code 13, or carriage return) in the example. "1B" = ASC code 27.
+
+ 
+                                Additional functions 
+ 
+          Letter Keys (a-z) 
+ 
+          When the cursor is on top of any lowercase letter in the Lines 
+          Screen pressing a letter key will allow one to swap that letter 
+          with the letter pressed.
+  
+ 
+ 
+                                                                         22 
+ 
+                                Control Keys Appendix 
+  
+          Print 
+          Ctrl-P 
+          Print to disk file or printer 
+ 
+          Zoom 
+          Ctrl-Z 
+          Toggle between display options 
+ 
+          Every time you select this option you will cycle to the next 
+          display option.  The following is a list of the three display 
+          options: 
+               1 - Full screen of lines. 
+               2 - Full screen of proofs. 
+               3 - Split screen of proofs and lines. (The default) 
+ 
+          Vroom 
+          Ctrl-V 
+          Jump to end of a well formed formula 
+ 
+          Jump 
+          Ctrl-J 
+          Jump to a specific line number 
+
+          Selecting this option will allow you to move the cursor to a 
+          specific line number.  You will be prompted for a line number  
+          which can be up to three digits in length.  The lines screen 
+          will change to the section of the system you want with the cursor 
+          resting on the line you selected.  If you have done a search 
+          which turns up a series of lines containing your search string
+          then you can jump consecutively to these lines simply by 
+          selecting Jump and then hitting <ENTER>.  Each time you do this, 
+          you will be taken to each line number in the "lines found" list. 
+          After jumping to the last line you will be cycled back to the first
+          line in the list.  After creating a new line, choosing Jump and
+          hitting enter will take you to that line.
+
+          Block 
+          Ctrl-B 
+          The blocking/highlighting Function 
+ 
+          Del 
+          Ctrl-D 
+          Deletes a line 
+ 
+          Search 
+          Ctrl-S 
+          Search for a string of characters 
+ 
+          New 
+          Ctrl-N 
+          Start a new system 
+ 
+
+
+  
+                                                                        23 
+
+          Load 
+          Ctrl-R 
+          Read a system of lines and proofs from disk 
+ 
+          Save 
+          Ctrl-W 
+          Save your system of lines and proofs to disk 
+
+          Files
+          Ctrl-F
+          Get a directory
+
+          ChgDir
+          Ctrl-C
+          Change the current working directory
+
+          Mem
+          Ctrl-O
+          Display available memory
+
+          Ctrl-Pg Up     Moves the cursor up by 100 lines 
+ 
+          Ctrl-Pg Dn     Moves the cursor down by 100 lines 
+ 
+          Ctrl-Home      Jump to first line of the proof 
+ 
+          Ctrl-End       Jump to last line of the proof 
+ 
+          Ctrl-R Arrow   Move cursor to next right bracket 
+ 
+          Ctrl-L Arrow   Move cursor to next left bracket 
+ 
+ 
+
+                                     Program Files 
+ 
+ 
+          LOGIC53.EXE    The Logical Theorist 5.3 program file 
+ 
+          LOGIC53.BAS    Borland Turbo Basic 1.1 main source code file for the Logical 
+                         Theorist 5.3 program.  Any additional source files will also
+                         have the .BAS extention.
+ 
+          BERNAYS.4      Loadable axioms sets 
+          GOETLIND.4 
+          LUKASIEW.1 
+          LUKASIEW.9 
+          MEREDITH.1 
+          ROSIOWA.3 
+          RUSSELL.5 
+          TARSBERN.3
+          MANUAL53.TXT   This manual
+ 

@@ -1,0 +1,14 @@
+body {font-family: Arial, Helvetica, sans-serif; font-size: 10pt ;color: gold; background-color: green}
+
+h1 {text-align: center; font-family: Monotype Corsiva, Arial Black; color: gold}
+h2 {text-align: left; font-family: Monotype Corsiva, Arial Black, Helvetica, sans-serif; line-height: 1.1; color: gold}
+h3 {text-align: left; font-family: Monotype Corsiva, Arial, Helvetica, sans-serif; color: gold; margin-bottom: 0pt; padding-bottom: 0pt; margin-bottom: 0pt; line-height: 1.1}
+
+table {font-family: Arial, Helvetica, sans-serif; font-size: 9pt; color: gold}
+
+ul {list-style: disc outside; margin-left: 9pt; padding-left: 9pt; padding-top: 0pt; margin-top: 9pt}
+li {font-size: 9pt}
+
+a:visited {color: black; text-decoration: none}
+a:link {color: black; text-decoration: none}
+a:hover {color:black; text-decoration: none}

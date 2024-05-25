@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Naomi Gerrie's Home Page</title>
+<link href="css/jim.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+
+function calculate_age(birth_month,birth_day,birth_year)
+{
+    today_date = new Date();
+    today_year = today_date.getYear();
+    today_month = today_date.getMonth();
+    today_day = today_date.getDate();
+    age = (today_year + 1900) - birth_year;
+    if ( today_month < (birth_month - 1))
+    {
+      age--;
+    }
+    if (((birth_month - 1) == today_month) && (today_day < birth_day))
+    { 
+      age--;
+    }
+    if (age > 1900)
+    {
+    age -= 1900;
+    }
+  return age;
+}
+</script>
+</head>
+<h1>Naomi Gerrie</h1>
+<font size="+1">
+<p align="center"><b>Age 14 months</b></p></font>
+
+<p align="center"><img
+src="img/GerrieGirls.jpg" border="1"
+alt="Gerrie Girls T-Rex"></p>
+<p align="center"><a href="http://www.youtube.com/watch?v=giV94N86_14&feature=g-upl">Click here to see Naomi's first steps</a></p>
+
+<p align="center"><a href="gigi.html">Visit the Home Page of Naomi's Grandma</a></p>
+
+<p align="center">
+
+<script type="text/javascript">
+
+document.write("Naomi is now " + calculate_age(8,18,2008) + " years old" );
+
+</script>
+</p>
+
+
+</body>
+</html>
